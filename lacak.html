@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Lacak Lokasi by Yanz</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom right, #000428, #004e92);
+            font-family: Arial, sans-serif;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #222;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .warning {
+            background: #333;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            background: #00f0ff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>WEB LACAK LOKASI BY YANZ</h1>
+        <div class="warning">JANGAN MENYALAHGUNAKAN WEBSITE INI!</div>
+        <input type="text" id="nomor" placeholder="Nomor Whatsapp Target">
+        <button onclick="lacak()">LACAK</button>
+        <!-- Audio tersembunyi -->
+        <audio id="audioMantap" src="mantap.mp3"></audio>
+    </div>
+
+    <script>
+        function lacak() {
+            const nomor = document.getElementById('nomor').value.trim();
+            if (nomor === "") {
+                alert("Masukkan nomor WhatsApp terlebih dahulu!");
+                return;
+            }
+            console.log("Nomor target:", nomor);
+            alert("Melacak nomor: " + nomor);
+
+            // Putar audio
+            const audio = document.getElementById('audioMantap');
+            audio.play().catch(error => {
+                console.log("Gagal memutar audio:", error);
+            });
+        }
+    </script>
+</body>
+</html>
