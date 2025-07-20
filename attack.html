@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ATACKER DDOS</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      font-family: monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #fff;
+    }
+
+    .attack-container {
+      background-color: #111;
+      border: 2px solid red;
+      padding: 30px;
+      border-radius: 8px;
+      text-align: center;
+      width: 300px;
+    }
+
+    .attack-container img {
+      width: 100px;
+      margin-bottom: 20px;
+    }
+
+    .attack-container h1 {
+      font-size: 20px;
+      margin: 0;
+    }
+
+    .attack-container p {
+      color: red;
+      font-size: 12px;
+      margin-bottom: 20px;
+    }
+
+    .attack-container input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid red;
+      background-color: #222;
+      color: #fff;
+    }
+
+    .attack-container button {
+      width: 95%;
+      padding: 10px;
+      background-color: red;
+      border: none;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .attack-container button:hover {
+      background-color: #ff0000aa;
+    }
+  </style>
+</head>
+<body>
+  <div class="attack-container">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Anonymous_emblem.svg/2048px-Anonymous_emblem.svg.png" alt="Logo"/>
+    <h1>ATACKER</h1>
+    <p>WE ARE FINALLY FREE. WE ARE FINALLY AWAKE.</p>
+    <input type="text" placeholder="Target Url" id="targetUrl" />
+    <input type="number" placeholder="Jumlah Request" id="jumlahRequest" />
+    <button onclick="startAttack()">Start Attack</button>
+  </div>
+
+  <!-- Tambahkan audio -->
+  <audio id="attackSound" src="ddosdes.mp3" preload="auto"></audio>
+
+  <script>
+    function startAttack() {
+      const targetUrl = document.getElementById('targetUrl').value;
+      const jumlahRequest = document.getElementById('jumlahRequest').value;
+
+      // Putar suara
+      const sound = document.getElementById('attackSound');
+      sound.play();
+
+      alert('Target: ' + targetUrl + '\nJumlah Request: ' + jumlahRequest);
+    }
+  </script>
+</body>
+</html>
